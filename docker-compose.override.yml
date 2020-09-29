@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  gerenciajogos:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "6000:8080"
+    restart: on-failure
+
+  sql.database:
+    environment:
+      - SA_PASSWORD=DeveloperSql!
+      - ACCEPT_EULA=Y
+    ports:
+      - "11433:1433"

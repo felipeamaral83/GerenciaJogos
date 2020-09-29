@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  gerenciajogos:
+    container_name: gerenciajogos.application.api
+    image: gerenciajogos:dev
+    build:
+      context: .
+      dockerfile: GerenciaJogos/Dockerfile
+    depends_on:
+      - sql.database
+
+  sql.database:
+    container_name: gerenciajogos.application.database
+    image: microsoft/mssql-server-linux:2017-latest

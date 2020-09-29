@@ -1,0 +1,11 @@
+﻿using System;
+
+namespace GerenciaJogos.ApplicationService.Dtos.Game
+{
+    public class GameListDto
+    {
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public bool Borrowed { get; set; }
+    }
+}
